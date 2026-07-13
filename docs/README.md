@@ -20,7 +20,7 @@ automatically. No workflow file, no Node install, nothing to configure.
 
 ## Custom domain
 
-Add a `docs/CNAME` file containing your domain (e.g. `firstukinverseproblemsconference.uk`)
+Add a `docs/CNAME` file containing your domain (e.g. `firstukinverseproblemsconference.co.uk`)
 and point a DNS `CNAME` record for that host at `<user>.github.io`. GitHub
 Pages provisions HTTPS automatically.
 
