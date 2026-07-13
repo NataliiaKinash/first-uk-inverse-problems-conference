@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Event",
-          name: "First UK Conference on Inverse Problems",
+          name: "First UK Inverse Problem Conference",
           startDate: "2027-03-22",
           endDate: "2027-03-23",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
@@ -57,7 +57,7 @@ function Index() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2 font-display text-lg text-ink">
           <span className="inline-block h-6 w-6 rounded-full border-2 border-primary" />
-          UK Inverse Problems
+          First UK Inverse Problem Conference
         </div>
         <div className="hidden gap-6 text-sm text-muted-foreground md:flex">
           <a href="#about" className="hover:text-ink">About</a>
@@ -85,9 +85,9 @@ function Index() {
               Preliminary announcement
             </div>
             <h1 className="font-display text-4xl leading-[1.05] md:text-6xl">
-              First UK Conference on
+              First UK
               <br />
-              <span style={{ color: "var(--saffron)" }}>Inverse Problems</span>
+              <span style={{ color: "var(--saffron)" }}>Inverse Problem Conference</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-paper/85">
               22–23 March 2027 · School of Mathematics, University of Leeds. A new biennial meeting
@@ -102,7 +102,7 @@ function Index() {
                 Registration &amp; template →
               </a>
               <a
-                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Conference%20on%20Inverse%20Problems"
+                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Inverse%20Problem%20Conference"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
               >
                 Submit an abstract
@@ -276,7 +276,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-8 text-sm text-muted-foreground">
-          <span>© 2026–2027 First UK Conference on Inverse Problems</span>
+          <span>© 2026–2027 First UK Inverse Problem Conference</span>
           <span>University of Leeds</span>
         </div>
       </footer>
