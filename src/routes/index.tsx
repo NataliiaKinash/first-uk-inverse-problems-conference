@@ -57,7 +57,9 @@ function Index() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2 font-display text-lg text-ink">
           <span className="inline-block h-6 w-6 rounded-full border-2 border-primary" />
-          First UK Inverse Problems Conference
+          First UK Conference on&nbsp;
+          <br />
+          Inverse Problems
         </div>
         <div className="hidden gap-6 text-sm text-muted-foreground md:flex">
           <a href="#about" className="hover:text-ink">About</a>
@@ -87,10 +89,10 @@ function Index() {
             <h1 className="font-display text-4xl leading-[1.05] md:text-6xl">
               First UK
               <br />
-              <span style={{ color: "var(--saffron)" }}>Inverse Problems Conference</span>
+              <span style={{ color: "var(--saffron)" }}>Conference on&nbsp;Inverse Problems</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-paper/85">
-              22–23 March 2027 · School of Mathematics, University of Leeds. A new biennial meeting
+              22–23 March 2027 · School of Mathematics, the Mall Room (level D), University of Leeds. A new biennial meeting
               for the UK inverse problems community — senior academics, postdocs and PhD students
               presenting current work.
             </p>
