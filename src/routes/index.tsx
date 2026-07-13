@@ -102,7 +102,7 @@ function Index() {
                 Registration &amp; template →
               </a>
               <a
-                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Conference%20on%20Inverse%20Problems"
+                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Inverse%20Problem%20Conference"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
               >
                 Submit an abstract
@@ -276,7 +276,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-8 text-sm text-muted-foreground">
-          <span>© 2026–2027 First UK Conference on Inverse Problems</span>
+          <span>© 2026–2027 First UK Inverse Problem Conference</span>
           <span>University of Leeds</span>
         </div>
       </footer>
