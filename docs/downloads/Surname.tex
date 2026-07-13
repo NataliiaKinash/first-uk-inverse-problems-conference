@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{psfrag}
+\usepackage{epsf,epsfig,amsfonts,amssymb}
+\setlength{\textwidth}{165 mm}
+\setlength{\oddsidemargin}{-0.05in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.7in}
+\pagestyle{plain}
+\hoffset=5mm
+\usepackage[centertags]{amsmath}    
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{subfigure} 
+\usepackage{array}
+\usepackage{float}
+
+
+
+\begin{document}
+
+\noindent
+{\it Proceedings of the First UK Conference on Inverse Problems}\\
+(eds. D. Lesnic and N. Kinash), Leeds University Press, pp. ?-?, 2027\\
+
+\noindent
+\\
+
+\begin{center}
+\Large{\bf Inverse interface determination using a level-set approach}
+\end{center}
+
+\begin{center}
+Initials. Surname$^{1}$ and Initials. Surname$^{2}$\\
+$^{1}${\it Department ..., University..., Country. E-mail: }\\
+$^{2}${\it Department ..., University..., Country. E-mail: }\\
+\end{center}
+
+\noindent
+\\
+
+\noindent
+{\bf Abstract.} The paper should have maximum 10 pages.
+
+\section{Introduction} \label{Section1}
+Permeability spans several order of magnitudes over different length scales and 
+dynamic data from wells provide important information for permeability 
+estimation.\\
+\indent
+This classical but fundamental inverse problem of groundwater flows, as named in the review paper by \cite{Yeh}, with obvious importance to the oil industry, is naturally suited 
+to a zonation approach in which the permeability of each zone of the inhomogeneous aquifer is unknwon 
+and has to be inferred from piezometric head 
+measurements. 
+
+\section{Mathematical formulation} \label{Section2}
+Consider the steady-state reaction-diffusion equation
+\begin{eqnarray}
+- \nabla \cdot (a({\bf x}) \nabla u) + C({\bf x}) u=Q({\bf x}), \quad {\bf x} \in \Omega:=(-1,1)^{2}. 
+\label{eq:1}
+\end{eqnarray}
+
+\section{Conclusions} \label{Section5}
+A simple, easy-to-use and fast regularised level-set approach has been devised to 
+find the interfaces between materials.  \\
+
+\noindent
+{\bf Acknowledgements}\\
+Some financial support received from the University of Leeds is acknowledged.\\
+
+\noindent
+Figures should be black and white, i.e. no colour. Use different line styles or markers. The numbering and lettering on the axes should be big.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Objective_func_case1_r1.eps}
+\end{center}
+\caption{Logarithm of the objective function.}
+\label{Fig1}
+\end{figure}
+
+Please use consistently the reference style below.
+
+
+\begin{thebibliography}{10}
+\bibitem{Ang}{W.T. Ang and H. Fan} (2003) A hypersingular boundary integral formulation for heat conduction across an imperfect interface, In: {\it Advances in Boundary Element Techniques IV}, (eds. R. Gallego and M.H. Aliabadi), Queen Mary, University of London, UK, pp.267-274.
+
+\bibitem{Berre1}{I. Berre, M. Lien and T. Mannseth} (2008) A multi-level strategy for regularized parameter identification 
+using nonlinear reparametrisation 
+with sample application for reservoir characterization, {\it Journal of Physics: Conference Series}, {\bf 135}, 
+Article 012018, (8 pages).
+
+\bibitem{Suetin}{P.K. Suetin} (1999) {\it Orthogonal Polynomials in Two Variables}, Gordon and Breach, London.
+
+\bibitem{Yeh}{W.W.-G. Yeh} (1986) Review of parameter identification procedures in groundwater hydrology: The inverse problem, {\it Water Resources Research}, {\bf 22}, 95-108.
+\end{thebibliography}
+
+\end{document}
+
