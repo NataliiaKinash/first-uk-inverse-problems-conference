@@ -132,7 +132,7 @@ function Index() {
           <div>
             <div className="text-xs uppercase tracking-[0.18em] text-primary">About</div>
             <h2 className="mt-3 font-display text-3xl md:text-4xl">
-              A meeting place for UK inverse problems research.
+              {"\n"}
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
@@ -153,12 +153,10 @@ function Index() {
             <div className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--saffron)" }}>Fee</div>
             <div className="mt-2 font-display text-3xl">£90</div>
             <p className="mt-3 text-sm text-muted-foreground">
-              Kept deliberately low to cover proceedings publication, lunches, conference dinner and
-              refreshments. Travel and accommodation are the participant's own.
+              The purpose of this series of conferences is to keep the fees accessible and as low as possible to top-up expenses related to the provided lunches, conference dinner, refreshments, proceedings publication, advertisement, etc. The link for paying the £90 conference registration fee can be found here.
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Suggested lodging: IBIS Hotel, Marlborough Street, Leeds LS1 4PB — 10-minute walk from
-              the University and Leeds station.
+              Participants will need to make their own arrangements for travel and accommodation (suggestion: IBIS Hotel in Marlborough Street, Leeds LS1 4PB, which is situated 10-minute walk from both Leeds University and Leeds train station).&nbsp;
             </p>
           </aside>
         </div>
@@ -215,12 +213,11 @@ function Index() {
             <div className="font-display text-xl">Registration fee</div>
             <p className="mt-2 text-sm text-muted-foreground">
               The £90 registration fee covers lunches, the conference dinner, refreshments and the
-              published proceedings. The payment link will be circulated with the acceptance
-              notification.
+              published proceedings.&nbsp;
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               Presentation-only or attendance-only participation (without submitting a paper) is
-              welcome.
+              possible. Please register and pay the fees as early as possible using the payment link available here.
             </p>
           </div>
         </div>
@@ -247,9 +244,9 @@ function Index() {
                 <li className="border-b border-border py-2 text-ink">Nataliia Kinash — Leeds</li>
               </ul>
               <div id="contact" className="mt-10 rounded-lg bg-secondary p-6">
-                <div className="font-display text-xl">Contact</div>
+                <div className="font-display text-xl">Contacts</div>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Send abstracts and enquiries directly to the organisers.
+                  {"\n"}
                 </p>
                 <ul className="mt-3 space-y-1 text-sm">
                   <li>
