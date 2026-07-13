@@ -1,17 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroAsset from "@/assets/hero-conference.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    links: [
-      { rel: "canonical", href: "/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap",
-      },
-    ],
+    links: [{ rel: "canonical", href: "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -25,7 +18,7 @@ export const Route = createFileRoute("/")({
           eventStatus: "https://schema.org/EventScheduled",
           location: {
             "@type": "Place",
-            name: "Department of Applied Mathematics, University of Leeds",
+            name: "School of Mathematics, University of Leeds",
             address: "Leeds LS2 9JT, UK",
           },
           organizer: [
@@ -38,158 +31,251 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const deadlines: { date: string; text: string }[] = [
-  { date: "1 October 2026", text: "Abstract (≈100 words) submission by email to D.Lesnic@leeds.ac.uk" },
-  { date: "15 October 2026", text: "Notification of acceptance of abstracts" },
-  { date: "15 December 2026", text: "Submission of full paper for possible publication in the Conference Proceedings" },
-  { date: "15 January 2027", text: "Notification of acceptance / revision of papers" },
-  { date: "15 February 2027", text: "Final papers due" },
-  { date: "1 March 2027", text: "Deadline for payment of the conference registration fee" },
+const deadlines = [
+  { date: "1 Oct 2026", text: "Abstract submission (≈100 words) by email to D.Lesnic@leeds.ac.uk" },
+  { date: "15 Oct 2026", text: "Notification of acceptance of abstracts" },
+  { date: "15 Dec 2026", text: "Full paper submission (optional) for the Proceedings" },
+  { date: "15 Jan 2027", text: "Notification of acceptance / revision of papers" },
+  { date: "15 Feb 2027", text: "Final papers due" },
+  { date: "1 Mar 2027", text: "Deadline for payment of the £90 registration fee" },
+];
+
+const scientific = [
+  "Simon Arridge — UCL",
+  "Carola-Bibiane Schönlieb — Cambridge",
+  "Romina Gaburro — Limerick",
+  "Paul Ledger — Leicester",
+  "Daniel Lesnic — Leeds",
+  "Bill Lionheart — Manchester",
+  "Marco Marletta — Cardiff",
 ];
 
 function Index() {
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-border">
-        <div className="mx-auto max-w-3xl px-6 pt-16 pb-10">
-          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-            University of Leeds · School of Mathematics
-          </p>
-          <h1 className="mt-4 text-4xl sm:text-5xl font-semibold leading-[1.05] text-primary">
-            First UK Conference on Inverse Problems
-          </h1>
-          <p className="mt-5 text-lg text-foreground/80">
-            22–23 March 2027 · Department of Applied Mathematics, University of Leeds
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#registration"
-              className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
-            >
-              Registration £90
-            </a>
-            <a
-              href="/downloads/Surname.tex"
-              className="inline-flex items-center rounded-md border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:bg-muted transition"
-              download
-            >
-              LaTeX template (.tex)
-            </a>
-            <a
-              href="/downloads/Surname.pdf"
-              className="inline-flex items-center rounded-md border border-border bg-card px-4 py-2 text-sm font-medium text-primary hover:bg-muted transition"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Template preview (.pdf)
-            </a>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Nav */}
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <div className="flex items-center gap-2 font-display text-lg text-ink">
+          <span className="inline-block h-6 w-6 rounded-full border-2 border-primary" />
+          UK Inverse Problems
+        </div>
+        <div className="hidden gap-6 text-sm text-muted-foreground md:flex">
+          <a href="#about" className="hover:text-ink">About</a>
+          <a href="#dates" className="hover:text-ink">Key dates</a>
+          <a href="#template" className="hover:text-ink">Template &amp; Fee</a>
+          <a href="#committee" className="hover:text-ink">Committee</a>
+          <a href="#contact" className="hover:text-ink">Contact</a>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "var(--ink)" }}>
+        <img
+          src={heroAsset.url}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(90deg, var(--ink) 0%, color-mix(in oklch, var(--ink) 85%, transparent) 60%, color-mix(in oklch, var(--ink) 40%, transparent) 100%)" }}
+        />
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="max-w-3xl text-paper">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-paper/25 px-3 py-1 text-xs uppercase tracking-[0.18em] text-paper/85">
+              Preliminary announcement
+            </div>
+            <h1 className="font-display text-4xl leading-[1.05] md:text-6xl">
+              First UK Conference on
+              <br />
+              <span style={{ color: "var(--saffron)" }}>Inverse Problems</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-paper/85">
+              22–23 March 2027 · School of Mathematics, University of Leeds. A new biennial meeting
+              for the UK inverse problems community — senior academics, postdocs and PhD students
+              presenting current work.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#template"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition hover:opacity-90"
+              >
+                Registration &amp; template →
+              </a>
+              <a
+                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Conference%20on%20Inverse%20Problems"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
+              >
+                Submit an abstract
+              </a>
+            </div>
+            <div className="mt-10 grid max-w-xl grid-cols-1 gap-4 text-sm text-paper/80 sm:grid-cols-2">
+              <div className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--peak)" }}>
+                  <path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" />
+                </svg>
+                22–23 March 2027
+              </div>
+              <div className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--peak)" }}>
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" />
+                </svg>
+                University of Leeds
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main className="mx-auto max-w-3xl px-6 py-14 space-y-14">
-        <section>
-          <h2 className="text-2xl font-semibold text-primary">About the conference</h2>
-          <div className="mt-4 space-y-4 text-foreground/85 leading-relaxed">
-            <p>
-              The use of and interest in Inverse Problems and their applications have been growing at
-              an ever-increasing rate over the last three decades. There are now well-established
-              annual meetings both internationally and within the EU. Much of the research centres
-              around the substantial contributions being made by UK researchers, and it was thought
-              appropriate to launch the First UK Conference on Inverse Problems in the School of
-              Mathematics at the University of Leeds, with subsequent series held biennially at
-              rotating centres of excellence in inverse problems.
-            </p>
-            <p>
-              The main aim of the Conference is for all researchers in the UK (senior academics,
-              research staff and postgraduate students) and elsewhere, working on Inverse Problems,
-              to meet in an informal way to present their current research work. Conference
-              Proceedings will be published (with ISB number) and distributed at the conference.
-              Only papers presented at the conference by registered authors will be included in the
-              proceedings. Presentation- or attendance-only participation is also possible.
-            </p>
+      {/* About */}
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-12 md:grid-cols-[2fr_1fr]">
+          <div>
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">About</div>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">
+              A meeting place for UK inverse problems research.
+            </h2>
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                Interest in inverse problems and their applications has grown steadily over the last
+                three decades. While well-established annual meetings exist internationally and within
+                the EU, much of the underlying research is driven by UK groups. This conference launches
+                a biennial UK series, hosted at rotating centres of excellence.
+              </p>
+              <p>
+                The aim is informal: bring together researchers in the UK and beyond — senior
+                academics, research staff and postgraduate students — to present current work.
+                Selected papers will appear in Conference Proceedings published with an ISBN and
+                distributed at the conference.
+              </p>
+            </div>
           </div>
-        </section>
+          <aside className="rounded-lg border border-border bg-card p-6">
+            <div className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--saffron)" }}>Fee</div>
+            <div className="mt-2 font-display text-3xl">£90</div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Kept deliberately low to cover proceedings publication, lunches, conference dinner and
+              refreshments. Travel and accommodation are the participant's own.
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Suggested lodging: IBIS Hotel, Marlborough Street, Leeds LS1 4PB — 10-minute walk from
+              the University and Leeds station.
+            </p>
+          </aside>
+        </div>
+      </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold text-primary">Scientific committee</h2>
-          <p className="mt-4 italic text-foreground/85 leading-relaxed">
-            Simon Arridge (UCL), Carola Bibiane-Schönlieb (Cambridge), Romina Gaburro (Limerick),
-            Paul Ledger (Leicester), Daniel Lesnic (Leeds), Bill Lionheart (Manchester) and
-            Marco Marletta (Cardiff).
-          </p>
-          <h3 className="mt-6 text-lg font-semibold text-primary">Local organising committee</h3>
-          <p className="mt-2 text-foreground/85">Daniel Lesnic and Nataliia Kinash.</p>
-        </section>
-
-        <section id="deadlines">
-          <h2 className="text-2xl font-semibold text-primary">Key dates</h2>
-          <ol className="mt-6 divide-y divide-border border-y border-border">
+      {/* Deadlines */}
+      <section id="dates" className="border-y border-border bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="text-xs uppercase tracking-[0.18em] text-primary">Key dates</div>
+          <h2 className="mt-3 font-display text-3xl md:text-4xl">Deadlines</h2>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
             {deadlines.map((d) => (
-              <li key={d.date} className="grid grid-cols-1 sm:grid-cols-[12rem_1fr] gap-1 sm:gap-6 py-4">
-                <span className="font-medium text-accent">{d.date}</span>
-                <span className="text-foreground/85">{d.text}</span>
-              </li>
+              <div key={d.date} className="bg-card p-6">
+                <div className="font-display text-xl text-primary">{d.date}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{d.text}</div>
+              </div>
             ))}
-          </ol>
-        </section>
-
-        <section id="registration">
-          <h2 className="text-2xl font-semibold text-primary">Registration & costs</h2>
-          <p className="mt-4 text-foreground/85 leading-relaxed">
-            The purpose of this series is to keep fees as low as possible, covering lunches,
-            conference dinner, refreshments, proceedings publication and advertisement. The
-            registration fee is <strong>£90</strong>. The payment link will be provided here.
-          </p>
-          <p className="mt-3 text-foreground/85 leading-relaxed">
-            Participants make their own travel and accommodation arrangements. Suggested: IBIS
-            Hotel, Marlborough Street, Leeds LS1 4PB — a 10-minute walk from both the University
-            and Leeds train station.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold text-primary">Proceedings & template</h2>
-          <p className="mt-4 text-foreground/85 leading-relaxed">
-            Full papers for the Conference Proceedings should be prepared using the LaTeX template
-            below (maximum 10 pages, black-and-white figures with clear line styles or markers).
-          </p>
-          <ul className="mt-4 space-y-2 text-primary">
-            <li>
-              <a className="underline underline-offset-4 hover:text-accent" href="/downloads/Surname.tex" download>
-                Download LaTeX source — Surname.tex
-              </a>
-            </li>
-            <li>
-              <a className="underline underline-offset-4 hover:text-accent" href="/downloads/Surname.pdf" target="_blank" rel="noreferrer">
-                View compiled example — Surname.pdf
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section id="contact">
-          <h2 className="text-2xl font-semibold text-primary">Contact</h2>
-          <div className="mt-4 space-y-1 text-foreground/85">
-            <p>
-              Professor Daniel Lesnic —{" "}
-              <a className="underline underline-offset-4 text-primary hover:text-accent" href="mailto:D.Lesnic@leeds.ac.uk">
-                D.Lesnic@leeds.ac.uk
-              </a>
-            </p>
-            <p>
-              Dr Nataliia Kinash —{" "}
-              <a className="underline underline-offset-4 text-primary hover:text-accent" href="mailto:N.Kinash@leeds.ac.uk">
-                N.Kinash@leeds.ac.uk
-              </a>
-            </p>
-            <p className="pt-2">Department of Applied Mathematics, University of Leeds, Leeds LS2 9JT, UK</p>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* Template */}
+      <section id="template" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid gap-12 md:grid-cols-2">
+          <div>
+            <div className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--saffron)" }}>
+              Proceedings template
+            </div>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl">LaTeX paper template</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Full papers for the Conference Proceedings should be prepared with the LaTeX template
+              below. Maximum 10 pages. Figures should be black and white — use different line styles
+              or markers, with large axis labels.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="/downloads/Surname.tex"
+                download
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow hover:opacity-90"
+              >
+                Download Surname.tex
+              </a>
+              <a
+                href="/downloads/Surname.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-ink hover:bg-muted"
+              >
+                View compiled PDF
+              </a>
+            </div>
+          </div>
+          <div className="rounded-lg bg-secondary p-6">
+            <div className="font-display text-xl">Registration fee</div>
+            <p className="mt-2 text-sm text-muted-foreground">
+              The £90 registration fee covers lunches, the conference dinner, refreshments and the
+              published proceedings. The payment link will be circulated with the acceptance
+              notification.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Presentation-only or attendance-only participation (without submitting a paper) is
+              welcome.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Committee */}
+      <section id="committee" className="border-t border-border bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="grid gap-12 md:grid-cols-2">
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em] text-primary">Scientific Committee</div>
+              <ul className="mt-4 space-y-0 text-base">
+                {scientific.map((m) => (
+                  <li key={m} className="border-b border-border py-2 text-ink">{m}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--saffron)" }}>
+                Local Organising Committee
+              </div>
+              <ul className="mt-4 space-y-0 text-base">
+                <li className="border-b border-border py-2 text-ink">Daniel Lesnic — Leeds</li>
+                <li className="border-b border-border py-2 text-ink">Nataliia Kinash — Leeds</li>
+              </ul>
+              <div id="contact" className="mt-10 rounded-lg bg-secondary p-6">
+                <div className="font-display text-xl">Contact</div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Send abstracts and enquiries directly to the organisers.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm">
+                  <li>
+                    Prof Daniel Lesnic —{" "}
+                    <a className="text-primary underline underline-offset-4" href="mailto:D.Lesnic@leeds.ac.uk">
+                      D.Lesnic@leeds.ac.uk
+                    </a>
+                  </li>
+                  <li>
+                    Dr Nataliia Kinash —{" "}
+                    <a className="text-primary underline underline-offset-4" href="mailto:N.Kinash@leeds.ac.uk">
+                      N.Kinash@leeds.ac.uk
+                    </a>
+                  </li>
+                </ul>
+                <p className="mt-3 text-xs text-muted-foreground">
+                  Department of Applied Mathematics, University of Leeds, Leeds LS2 9JT, UK
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer className="border-t border-border">
-        <div className="mx-auto max-w-3xl px-6 py-8 text-sm text-muted-foreground flex flex-wrap justify-between gap-2">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-8 text-sm text-muted-foreground">
           <span>© 2026–2027 First UK Conference on Inverse Problems</span>
           <span>University of Leeds</span>
         </div>
