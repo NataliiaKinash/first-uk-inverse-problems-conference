@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "First UK Conference on Inverse Problems — Leeds, 22–23 March 2027" },
+      { name: "description", content: "The First UK Conference on Inverse Problems, 22–23 March 2027, Department of Applied Mathematics, University of Leeds. Abstracts, deadlines, registration and LaTeX template." },
+      { name: "keywords", content: "Inverse Problems, UK Conference, Leeds, Applied Mathematics, 2027, Lesnic, Kinash" },
+      { property: "og:title", content: "First UK Conference on Inverse Problems — Leeds, 22–23 March 2027" },
+      { property: "og:description", content: "First UK Conference on Inverse Problems at the University of Leeds, 22–23 March 2027." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
