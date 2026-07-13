@@ -1,6 +1,6 @@
 # Static site for GitHub Pages
 
-This `docs/` folder is a **self-contained static copy** of the First UK Inverse Problem Conference
+This `docs/` folder is a **self-contained static copy** of the First UK Inverse Problems Conference
 site (same design, content, and LaTeX template downloads). It has no build
 step and no dependencies — it is plain HTML/CSS.
 
@@ -13,14 +13,14 @@ step and no dependencies — it is plain HTML/CSS.
    - **Source:** *Deploy from a branch*
    - **Branch:** `main` — **folder:** `/docs`
 4. Save. GitHub prints the live URL — typically
-   `https://<user>.github.io/first-uk-inverse-problem-conference/`.
+   `https://<user>.github.io/first-uk-inverse-problems-conference/`.
 
 That's it. Every push to `main` that touches `docs/` republishes the site
 automatically. No workflow file, no Node install, nothing to configure.
 
 ## Custom domain
 
-Add a `docs/CNAME` file containing your domain (e.g. `firstukinverseproblemconference.uk`)
+Add a `docs/CNAME` file containing your domain (e.g. `firstukinverseproblemsconference.uk`)
 and point a DNS `CNAME` record for that host at `<user>.github.io`. GitHub
 Pages provisions HTTPS automatically.
 
