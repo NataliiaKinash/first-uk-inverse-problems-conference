@@ -92,7 +92,7 @@ function Index() {
               <span style={{ color: "var(--saffron)" }}>Conference on&nbsp;Inverse Problems</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-paper/85">
-              22–23 March 2027 · School of Mathematics, the Mall Room (level D), University of Leeds. A new biennial meeting
+              22–23 March 2027 · School of Mathematics, the Mall Room (level 8), University of Leeds. A new biennial meeting
               for the UK inverse problems community — senior academics, postdocs and PhD students
               presenting current work.
             </p>
