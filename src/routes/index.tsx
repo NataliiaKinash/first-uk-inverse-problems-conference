@@ -104,6 +104,14 @@ function Index() {
                 Registration &amp; template →
               </a>
               <a
+                href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
+              >
+                Pay registration fee
+              </a>
+              <a
                 href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Inverse%20Problems%20Conference"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
               >
@@ -209,6 +217,14 @@ function Index() {
                 className="inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-ink hover:bg-muted"
               >
                 View compiled PDF
+              </a>
+              <a
+                href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-ink hover:bg-muted"
+              >
+                Pay registration fee →
               </a>
             </div>
           </div>
