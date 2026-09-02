@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroAsset from "@/assets/hero-conference.png.asset.json";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -55,8 +56,12 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <div className="flex items-center gap-2 font-display text-lg text-ink">
-          <span className="inline-block h-6 w-6 rounded-full border-2 border-primary" />
+        <div className="flex items-center gap-3 font-display text-lg text-ink">
+          <img
+            src={logoAsset.url}
+            alt="First UK Conference on Inverse Problems logo"
+            className="h-12 w-12 rounded-full"
+          />
           First UK Conference on&nbsp;
           <br />
           Inverse Problems
