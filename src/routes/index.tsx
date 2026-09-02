@@ -104,6 +104,14 @@ function Index() {
                 Registration &amp; template →
               </a>
               <a
+                href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
+              >
+                Pay registration fee
+              </a>
+              <a
                 href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Inverse%20Problems%20Conference"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
               >
@@ -155,7 +163,8 @@ function Index() {
             <div className="text-xs uppercase tracking-[0.18em]" style={{ color: "var(--saffron)" }}>Fee</div>
             <div className="mt-2 font-display text-3xl">£90</div>
             <p className="mt-3 text-sm text-muted-foreground">
-              The purpose of this series of conferences is to keep the fees accessible and as low as possible to top-up expenses related to the provided lunches, conference dinner, refreshments, proceedings publication, advertisement, etc. The link for paying the £90 conference registration fee can be found here.
+              The purpose of this series of conferences is to keep the fees accessible and as low as possible to top-up expenses related to the provided lunches, conference dinner, refreshments, proceedings publication, advertisement, etc. The link for paying the £90 conference registration fee can be found{" "}
+              <a className="text-primary underline underline-offset-4" href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems" target="_blank" rel="noreferrer">here</a>.
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
               Participants will need to make their own arrangements for travel and accommodation (suggestion: IBIS Hotel in Marlborough Street, Leeds LS1 4PB, which is situated 10-minute walk from both Leeds University and Leeds train station).&nbsp;
@@ -209,6 +218,14 @@ function Index() {
               >
                 View compiled PDF
               </a>
+              <a
+                href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-ink hover:bg-muted"
+              >
+                Pay registration fee →
+              </a>
             </div>
           </div>
           <div className="rounded-lg bg-secondary p-6">
@@ -219,7 +236,8 @@ function Index() {
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               Presentation-only or attendance-only participation (without submitting a paper) is
-              possible. Please register and pay the fees as early as possible using the payment link available here.
+              possible. Please register and pay the fees as early as possible using the payment link available{" "}
+              <a className="text-primary underline underline-offset-4" href="https://store.leeds.ac.uk/product-catalogue/faculty-of-engineering-and-physical-sciences/school-of-maths/first-uk-conference-on-inverse-problems" target="_blank" rel="noreferrer">here</a>.
             </p>
           </div>
         </div>
