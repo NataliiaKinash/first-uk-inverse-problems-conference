@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 });
 
 const deadlines = [
-  { date: "1 Oct 2026", text: "Abstract submission (≈100 words) by email to D.Lesnic@leeds.ac.uk" },
+  { date: "15 Oct 2026", text: "Abstract submission (≈100 words) by email to D.Lesnic@leeds.ac.uk" },
   { date: "15 Oct 2026", text: "Notification of acceptance of abstracts" },
   { date: "15 Dec 2026", text: "Full paper submission (optional) for the Proceedings" },
   { date: "15 Jan 2027", text: "Notification of acceptance / revision of papers" },
