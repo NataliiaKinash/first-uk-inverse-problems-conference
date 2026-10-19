@@ -177,13 +177,13 @@ function Index() {
       </section>
 
       {/* Deadlines */}
-      <section id="dates" className="border-y border-border bg-card">
+      <section id="dates" className="border-y border-border">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="text-xs uppercase tracking-[0.18em] text-primary">Key dates</div>
           <h2 className="mt-3 font-display text-3xl md:text-4xl">Deadlines</h2>
-          <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {deadlines.map((d) => (
-              <div key={d.date} className="bg-card p-6">
+              <div key={d.date} className="rounded-lg border border-border bg-card p-6">
                 <div className="font-display text-xl text-primary">{d.date}</div>
                 <div className="mt-1 text-sm text-muted-foreground">{d.text}</div>
               </div>
