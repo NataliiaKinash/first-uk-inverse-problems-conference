@@ -114,12 +114,6 @@ function Index() {
               >
                 Pay registration fee
               </a>
-              <a
-                href="mailto:D.Lesnic@leeds.ac.uk?subject=Abstract%20submission%20—%20First%20UK%20Inverse%20Problems%20Conference"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-paper/30 bg-transparent px-8 text-sm font-medium text-paper transition hover:bg-paper/10"
-              >
-                Submit an abstract
-              </a>
             </div>
             <div className="mt-10 grid max-w-xl grid-cols-1 gap-4 text-sm text-paper/80 sm:grid-cols-2">
               <div className="flex items-center gap-2">
