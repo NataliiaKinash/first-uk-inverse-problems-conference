@@ -78,11 +78,11 @@ function Index() {
         <img
           src={heroAsset.url}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
         />
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(90deg, var(--ink) 0%, color-mix(in oklch, var(--ink) 85%, transparent) 60%, color-mix(in oklch, var(--ink) 40%, transparent) 100%)" }}
+          style={{ background: "linear-gradient(90deg, color-mix(in oklch, var(--ink) 70%, transparent) 0%, color-mix(in oklch, var(--ink) 55%, transparent) 60%, color-mix(in oklch, var(--ink) 25%, transparent) 100%)" }}
         />
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="max-w-3xl text-paper">
